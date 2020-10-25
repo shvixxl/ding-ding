@@ -1,0 +1,7 @@
+body {
+  padding-top: 46px;
+}
+
+.jumbotron {
+  background: url("../img/jumbotron.jpg") no-repeat center;
+}
