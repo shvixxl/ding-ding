@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign In - {% endblock %}
+
+{% block content %}
+  <div class="auth container mt-auto bg-light px-5 py-4 shadow rounded-lg">
+    <h2 class="text-center display-4">Sign in</h2>
+    {% if error %}
+    <div class="d-flex justify-content-center mt-4">
+      <div class="alert alert-danger d-inline-flex mx-auto" role="alert">{{ error }}</div>
+    </div>
+    {% endif %}
+    <form method="post">
+      <div class="form-group mb-4">
+        <label for="email">Email address</label>
+        <input type="email" name="email" class="form-control" placeholder="example@email.com">
+        <a href="#" class="form-text mt-2">Forgot email?</a>
+      </div>
+      <div class="form-group mb-4">
+        <label for="password">Password</label>
+        <input type="password" name="password" class="form-control" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;">
+        <a href="#" class="form-text mt-2">Forgot password?</a>
+      </div>
+      <div class="d-flex form-group mt-4 justify-content-around">
+        <div class="">
+          <small class="form-text text-muted text-center">Don't have an account?</small>
+          <a href="{{ url_for('auth.register') }}" class="btn btn-outline-secondary">Create Account</a>
+        </div>
+        <button type="submit" class="btn btn-primary w-25 align-self-end">Sign In</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}

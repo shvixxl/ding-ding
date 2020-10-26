@@ -1,0 +1,44 @@
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS stores;
+DROP TABLE IF EXISTS items;
+DROP TABLE IF EXISTS orders;
+
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  email TEXT UNIQUE NOT NULL,
+  password TEXT NOT NULL,
+  tel TEXT,
+  name TEXT,
+  address TEXT
+);
+
+CREATE TABLE stores (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  type TEXT NOT NULL,
+  name TEXT NOT NULL
+);
+
+CREATE TABLE items (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  store_id INTEGER NOT NULL,
+  name TEXT NOT NULL,
+  price INTEGER NOT NULL,
+
+  FOREIGN KEY (store_id) REFERENCES stores (id)
+);
+
+CREATE TABLE orders (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER,
+  store_id INTEGER NOT NULL,
+  item_id INTEGER NOT NULL,
+  ordered TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  tel TEXT NOT NULL,
+  name TEXT NOT NULL,
+  address TEXT NOT NULL,
+  comment TEXT,
+
+  FOREIGN KEY (user_id) REFERENCES users (id),
+  FOREIGN KEY (store_id) REFERENCES stores (id),
+  FOREIGN KEY (item_id) REFERENCES items (id)
+);

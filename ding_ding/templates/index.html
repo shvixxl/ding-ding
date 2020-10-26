@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header id="#about" class="jumbotron jumbotron-fluid text-light shadow">
+  <div class="container-fluid text-center">
+    <h1 class="display-3">Delivery Company</h1>
+    <p class="lead pb-4">We can deliver anything you want from your favorite stores and restaurants.</p>
+    <p><a href="#services" class="btn btn-primary">Learn More</a></p>
+  </div>
+</header>
+
+<main class="container">
+  <h2 id="#services" class="display-4 text-center mt-5 mb-5">That's what we deliver</h2>
+
+  <div class="row text-center">
+    <div class="col-md">
+      <div class="shadow card h-100 mb-4">
+        <img src="{{ url_for('static', filename='img/food.jpg') }}" class="card-img-top" alt="food">
+        <div class="card-body">
+          <h2 class="card-title">Food</h2>
+          <p class="card-text">Don't want to wash dishes? You can order food from the restaurant!</p>
+        </div>
+        <div class="card-footer py-4">
+          <a href="#" class="btn btn-secondary stretched-link">See restaurants &raquo;</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="shadow card h-100 mb-4">
+        <img src="{{ url_for('static', filename='img/grocery.jpg') }}" class="card-img-top" alt="grocery">
+        <div class="card-body">
+          <h2 class="card-title">Grocery</h2>
+          <p class="card-text">Food bags too heavy for you? We can go to the store for you!</p>
+        </div>
+        <div class="card-footer py-4">
+          <a href="#" class="btn btn-secondary stretched-link">See stores &raquo;</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="shadow card h-100 mb-4">
+        <img src="{{ url_for('static', filename='img/something.jpg') }}" class="card-img-top" alt="something">
+        <div class="card-body">
+          <h2 class="card-title">Anything</h2>
+          <p class="card-text">Have something special on your mind? Make an order and we will contact you!</p>
+        </div>
+        <div class="card-footer py-4">
+          <a href="#" class="btn btn-secondary stretched-link">Make order &raquo;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

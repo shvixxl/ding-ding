@@ -1,0 +1,15 @@
+body {
+  padding-top: 46px;
+}
+
+.jumbotron {
+  background: url("../img/jumbotron.jpg") no-repeat center;
+}
+
+.auth {
+  max-width: 500px;
+}
+
+.form-textarea {
+    resize: none;
+}

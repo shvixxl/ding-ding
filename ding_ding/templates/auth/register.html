@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign In - {% endblock %}
+
+{% block content %}
+  <div class="auth container mt-auto bg-light px-5 py-4 shadow rounded-lg">
+    <h2 class="text-center display-4 mb-4">Create Accout</h2>
+    {% if error %}
+    <div class="d-flex justify-content-center mt-4">
+      <div class="alert alert-danger d-inline-flex mx-auto" role="alert">{{ error }}</div>
+    </div>
+    {% endif %}
+    <form method="post">
+      <div class="form-group mb-3">
+        <label for="email">Email address</label>
+        <input type="email" name="email" class="form-control" placeholder="example@email.com">
+        <small class="form-text text-muted"></small>
+      </div>
+      <div class="form-group mb-3">
+        <label for="password">Password</label>
+        <input type="password" name="password" class="form-control" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;">
+        <small class="form-text text-muted"></small>
+      </div>
+      <div class="shadow px-4 pt-4 pb-2 mt-4">
+        <div class="form-row">
+          <div class="col">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" name="name" class="form-control" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="tel">Phone number</label>
+              <input type="tel" name="tel" class="form-control" placeholder="+1 234 456 78910">
+            </div>
+          </div>
+          <div class="col form-group">
+            <label for="address">Address</label>
+            <textarea name="address" class="form-control form-textarea" placeholder="" rows="4"></textarea>
+          </div>
+        </div>
+        <p class="text-muted text-center mt-0"><small>Optional fields</small></p>
+      </div>
+      <div class="d-flex form-group justify-content-around mt-5">
+        <button type="submit" class="btn btn-primary w-25 align-self-end">Sign Up</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}

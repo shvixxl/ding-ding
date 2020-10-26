@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 211.37061 37.694673"
+   version="1.1"
+   id="svg234"
+   sodipodi:docname="logo.svg"
+   width="55.92514mm"
+   height="9.973382mm"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata240">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs238" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1860"
+     inkscape:window-height="990"
+     id="namedview236"
+     showgrid="true"
+     units="mm"
+     inkscape:snap-grids="true"
+     inkscape:zoom="0.81759222"
+     inkscape:cx="492.27631"
+     inkscape:cy="31.859764"
+     inkscape:window-x="30"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="text244"
+     inkscape:document-rotation="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid246"
+       originx="-39.000001"
+       originy="-1.0000001" />
+  </sodipodi:namedview>
+  <path
+     fill="#ffac33"
+     d="m 25,13 c 0,10.999999 5,9.999999 5,14.999999 0,0 0,2 -2,2 H 2 c -2,0 -2,-2 -2,-2 0,-5 5,-4 5,-14.999999 C 5,7.478 9.477,3 15,3 20.523,3 25,7.478 25,13 Z"
+     id="path228" />
+  <circle
+     fill="#ffac33"
+     cx="15"
+     cy="3"
+     r="3"
+     id="circle230" />
+  <path
+     fill="#ffac33"
+     d="m 15,36 c 2.209,0 4,-1.791 4,-4 h -8 c 0,2.209 1.791,4 4,4 z"
+     id="path232" />
+  <g
+     aria-label="Ding-Ding"
+     id="text244"
+     style="font-style:normal;font-weight:normal;font-size:38.6667px;line-height:1.25;font-family:sans-serif;fill:#ffac33;fill-opacity:1;stroke:none"
+     transform="translate(1.641836,-4.4029335)">
+    <path
+       d="m 38.358164,34.402934 h 10.130675 c 2.629335,0 5.220004,-0.734667 7.192005,-1.972003 3.75067,-2.358669 5.993339,-6.534673 5.993339,-11.445343 0,-4.910671 -2.242669,-9.086674 -5.993339,-11.445342 C 53.708843,8.3029116 51.118174,7.5682444 48.488839,7.5682444 H 38.358164 Z m 8.506673,-18.985349 c 0.07733,0 0.154667,0 0.232,0 3.828004,0 5.954672,2.049334 5.954672,5.568004 0,3.480003 -2.126668,5.568005 -5.877338,5.568005 -0.116,0 -0.193334,0 -0.309334,0 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.6667px;font-family:'ITC Kabel Ultra';-inkscape-font-specification:'ITC Kabel Ultra';fill:#ffac33;fill-opacity:1"
+       id="path306" />
+    <path
+       d="m 64.496843,34.634934 7.810673,-0.58 V 14.141582 L 64.496843,14.76025 Z M 63.684842,9.0375789 68.51818,13.329582 73.119517,9.1149123 68.286179,4.8615755 Z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.6667px;font-family:'ITC Kabel Ultra';-inkscape-font-specification:'ITC Kabel Ultra';fill:#ffac33;fill-opacity:1"
+       id="path308" />
+    <path
+       d="m 76.135501,34.828267 7.810673,-0.734668 v -11.48401 c 0,-1.082667 0.502667,-1.624001 1.314668,-1.624001 0.812,0 1.314667,0.541334 1.314667,1.624001 v 12.218678 l 7.73334,-0.734668 V 21.024254 c 0,-4.833337 -1.740001,-7.153338 -5.568005,-7.153338 -2.320001,0 -4.060003,0.889334 -5.413337,2.784002 v -2.668002 l -7.192006,0.657334 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.6667px;font-family:'ITC Kabel Ultra';-inkscape-font-specification:'ITC Kabel Ultra';fill:#ffac33;fill-opacity:1"
+       id="path310" />
+    <path
+       d="m 101.42347,29.956262 -0.696,1.314668 c 1.624,-0.232001 2.784,-0.309334 3.44133,-0.309334 2.74534,0 4.17601,0.850668 4.17601,2.358671 0,1.353332 -1.16001,2.049335 -3.40267,2.049335 -1.43067,0 -3.01601,-0.348001 -4.64001,-1.044003 l -3.634664,6.186671 c 2.784007,1.044001 5.684004,1.585335 8.738674,1.585335 6.844,0 10.94267,-3.325336 10.94267,-7.888006 0,-2.320002 -1.08267,-4.09867 -3.32533,-5.838672 2.32,-1.662668 3.44133,-3.673335 3.44133,-6.341338 0,-2.165336 -0.73466,-3.982669 -2.28133,-5.529338 l 1.70133,-3.441335 -4.33067,0.812 c -0.464,0.07733 -1.00533,0.116 -1.74,0.116 -1.392,0 -2.70667,-0.309333 -3.90534,-0.309333 -5.41333,0 -9.318668,3.712002 -9.318668,8.661339 0,3.596003 1.662668,6.148005 4.833338,7.61734 z m 5.104,-9.434675 c 1.23734,0 2.12667,0.850668 2.12667,2.088002 0,1.237334 -0.88933,2.088002 -2.12667,2.088002 -1.276,0 -2.12667,-0.850668 -2.12667,-2.088002 0,-1.237334 0.85067,-2.088002 2.12667,-2.088002 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.6667px;font-family:'ITC Kabel Ultra';-inkscape-font-specification:'ITC Kabel Ultra';fill:#ffac33;fill-opacity:1"
+       id="path312" />
+    <path
+       d="m 118.39813,27.365593 h 9.93734 v -5.800004 h -9.93734 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.6667px;font-family:'ITC Kabel Ultra';-inkscape-font-specification:'ITC Kabel Ultra';fill:#ffac33;fill-opacity:1"
+       id="path314" />
+    <path
+       d="m 131.62211,34.402934 h 10.13068 c 2.62934,0 5.22,-0.734667 7.19201,-1.972003 3.75067,-2.358669 5.99333,-6.534673 5.99333,-11.445343 0,-4.910671 -2.24266,-9.086674 -5.99333,-11.445342 -1.97201,-1.2373344 -4.56267,-1.9720016 -7.19201,-1.9720016 h -10.13068 z m 8.50668,-18.985349 c 0.0773,0 0.15467,0 0.232,0 3.828,0 5.95467,2.049334 5.95467,5.568004 0,3.480003 -2.12667,5.568005 -5.87734,5.568005 -0.116,0 -0.19333,0 -0.30933,0 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.6667px;font-family:'ITC Kabel Ultra';-inkscape-font-specification:'ITC Kabel Ultra';fill:#ffac33;fill-opacity:1"
+       id="path316" />
+    <path
+       d="m 157.7608,34.634934 7.81067,-0.58 V 14.141582 l -7.81067,0.618668 z m -0.812,-25.5973551 4.83333,4.2920031 4.60134,-4.2146697 -4.83334,-4.2533368 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.6667px;font-family:'ITC Kabel Ultra';-inkscape-font-specification:'ITC Kabel Ultra';fill:#ffac33;fill-opacity:1"
+       id="path318" />
+    <path
+       d="m 169.39944,34.828267 7.81068,-0.734668 v -11.48401 c 0,-1.082667 0.50266,-1.624001 1.31467,-1.624001 0.812,0 1.31466,0.541334 1.31466,1.624001 v 12.218678 l 7.73334,-0.734668 V 21.024254 c 0,-4.833337 -1.74,-7.153338 -5.568,-7.153338 -2.32,0 -4.06001,0.889334 -5.41334,2.784002 v -2.668002 l -7.19201,0.657334 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.6667px;font-family:'ITC Kabel Ultra';-inkscape-font-specification:'ITC Kabel Ultra';fill:#ffac33;fill-opacity:1"
+       id="path320" />
+    <path
+       d="m 194.68742,29.956262 -0.696,1.314668 c 1.624,-0.232001 2.784,-0.309334 3.44134,-0.309334 2.74533,0 4.176,0.850668 4.176,2.358671 0,1.353332 -1.16,2.049335 -3.40267,2.049335 -1.43067,0 -3.016,-0.348001 -4.64,-1.044003 l -3.63467,6.186671 c 2.784,1.044001 5.684,1.585335 8.73867,1.585335 6.84401,0 10.94268,-3.325336 10.94268,-7.888006 0,-2.320002 -1.08267,-4.09867 -3.32534,-5.838672 2.32,-1.662668 3.44134,-3.673335 3.44134,-6.341338 0,-2.165336 -0.73467,-3.982669 -2.28134,-5.529338 l 1.70134,-3.441335 -4.33067,0.812 c -0.464,0.07733 -1.00534,0.116 -1.74001,0.116 -1.392,0 -2.70666,-0.309333 -3.90533,-0.309333 -5.41334,0 -9.31868,3.712002 -9.31868,8.661339 0,3.596003 1.66267,6.148005 4.83334,7.61734 z m 5.10401,-9.434675 c 1.23733,0 2.12666,0.850668 2.12666,2.088002 0,1.237334 -0.88933,2.088002 -2.12666,2.088002 -1.27601,0 -2.12667,-0.850668 -2.12667,-2.088002 0,-1.237334 0.85066,-2.088002 2.12667,-2.088002 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.6667px;font-family:'ITC Kabel Ultra';-inkscape-font-specification:'ITC Kabel Ultra';fill:#ffac33;fill-opacity:1"
+       id="path322" />
+  </g>
+</svg>
