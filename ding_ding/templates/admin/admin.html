@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin - {% endblock %}
+
+{% block page %}
+  <nav class='navbar sidebar navbar-expand-lg navbar-dark bg-dark position-fixed vh-100'>
+    <a class="navbar-brand mx-auto mb-auto" href="{{ url_for('index.index') }}">
+      <img src="{{ url_for('static', filename='img/logo.svg') }}" height="30" alt="Ding-Ding">
+    </a>
+    <div class="overflow-auto">
+
+    </div>
+  </nav>
+  <main class='admin container'>
+    <h1>Test</h1>
+  </main>
+{% endblock %}

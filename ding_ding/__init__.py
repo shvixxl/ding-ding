@@ -32,6 +32,9 @@ def create_app():
     from . import auth
     app.register_blueprint(auth.bp)
 
+    from . import admin
+    app.register_blueprint(admin.bp)
+
     from . import profile
     app.register_blueprint(profile.bp)
 
