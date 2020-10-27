@@ -104,6 +104,7 @@ def login():
 
     return render_template('auth/login.html')
 
+
 @bp.route('/logout')
 def logout():
     session.clear()

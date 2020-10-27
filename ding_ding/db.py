@@ -1,8 +1,14 @@
 import sqlite3
-
 import click
-from flask import current_app, g
+
+from flask import current_app
+from flask import Blueprint
+from flask import jsonify
+from flask import g
+
 from flask.cli import with_appcontext
+
+bp = Blueprint('db', __name__, url_prefix='/db')
 
 
 def get_db():
@@ -41,3 +47,25 @@ def init_db_command():
 def init_app(app):
     app.teardown_appcontext(close_db)
     app.cli.add_command(init_db_command)
+
+
+@bp.route('/stores/', defaults={'search': ''})
+@bp.route('/stores/<search>')
+def get_stores(search):
+    stores = get_db().execute(
+        'SELECT * FROM stores WHERE name LIKE ? ORDER BY name', ('%'+search+'%',)
+    ).fetchall()
+    stores = [dict(row) for row in stores]
+
+    return jsonify(stores)
+
+
+@bp.route('/items/', defaults={'search': ''})
+@bp.route('/items/<search>')
+def get_items(search):
+    items = get_db().execute(
+        'SELECT * FROM items WHERE name LIKE ? ORDER BY name', ('%'+search+'%',)
+    ).fetchall()
+    items = [dict(row) for row in items]
+
+    return jsonify(items)

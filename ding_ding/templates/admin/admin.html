@@ -3,15 +3,35 @@
 {% block title %}Admin - {% endblock %}
 
 {% block page %}
-  <nav class='navbar sidebar navbar-expand-lg navbar-dark bg-dark position-fixed vh-100'>
-    <a class="navbar-brand mx-auto mb-auto" href="{{ url_for('index.index') }}">
-      <img src="{{ url_for('static', filename='img/logo.svg') }}" height="30" alt="Ding-Ding">
-    </a>
-    <div class="overflow-auto">
-
+  <nav class='navbar sidebar navbar-expand-lg navbar-dark bg-dark position-fixed vh-100 align-items-start'>
+    <div class="d-flex flex-column w-100 pt-3 px-2">
+      <a class="navbar-brand mx-auto" href="{{ url_for('index.index') }}">
+        <img src="{{ url_for('static', filename='img/logo.svg') }}" height="30" alt="Ding-Ding">
+      </a>
+      <div class="form-group my-4">
+        <input type="search" class="form-control" id="search-store" placeholder="Search">
+      </div>
+      <div class="overflow-auto text-light sidebar-dropdown pr-3 mt-4" id="stores">
+        {% for type in types %}
+          <div class="mb-4">
+            <a class="w-100 text-left d-block type-link" role="button" data-toggle="collapse" data-target="#{{ type }}" aria-expanded="false" aria-controls="{{ type }}">
+                <h3 class="font-weight-bold text-primary">{{ type|capitalize }} <span id="{{ type }}-count" class="badge badge-pill badge-light stores-count">0</span></h3>
+            </a>
+            <div id="{{ type }}" class="collapse ml-2 pl-2 border-left border-primary">
+              <ul id="{{ type }}-stores" class="list-unstyled list-stores">
+                <!-- stores -->
+              </ul>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
     </div>
   </nav>
-  <main class='admin container'>
+  <main class='admin container-fluid'>
     <h1>Test</h1>
   </main>
+{% endblock %}
+
+{% block script %}
+  <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
 {% endblock %}

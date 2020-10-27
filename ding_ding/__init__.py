@@ -20,14 +20,16 @@ def create_app():
     except OSError:
         pass
 
-    # database
-    from . import db
-    db.init_app(app)
 
     # index page
     from . import index
     app.register_blueprint(index.bp)
     app.add_url_rule('/', endpoint='index')
+
+    # database
+    from . import db
+    db.init_app(app)
+    app.register_blueprint(db.bp)
 
     from . import auth
     app.register_blueprint(auth.bp)

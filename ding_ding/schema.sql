@@ -15,7 +15,8 @@ CREATE TABLE users (
 CREATE TABLE stores (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   type TEXT NOT NULL,
-  name TEXT NOT NULL
+  name TEXT NOT NULL,
+  img TEXT
 );
 
 CREATE TABLE items (
@@ -23,6 +24,7 @@ CREATE TABLE items (
   store_id INTEGER NOT NULL,
   name TEXT NOT NULL,
   price INTEGER NOT NULL,
+  img TEXT
 
   FOREIGN KEY (store_id) REFERENCES stores (id)
 );

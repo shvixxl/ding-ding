@@ -3,6 +3,10 @@ html, body {
   padding: 0;
 }
 
+a, a:visited, a:hover, a:active, a:focus {
+  text-decoration: none;
+}
+
 .jumbotron {
   background: url("../img/jumbotron.jpg") no-repeat center;
 }
@@ -15,12 +19,12 @@ html, body {
     resize: none;
 }
 
-.full-vh {
-  height: calc(100vh - 46px);
+.index {
+  margin-top: 46px;
 }
 
-.index {
-  padding-top: 46px;
+.full-vh {
+  min-height: calc(100vh - 46px);
 }
 
 .admin {
@@ -29,4 +33,26 @@ html, body {
 
 .sidebar {
   width: 250px;
+}
+
+.type-link, .type-link:visited,
+.store-link, .store-link:visited {
+  color: rgb(100%, 100%, 100%);
+}
+
+.type-link:active, .type-link:hover, .type-link:focus, .type-link.active
+.store-link:active, .store-link:hover, .store-link:focus, .store-link.active {
+  color: rgb(50%, 50%, 50%);
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.sidebar-dropdown {
+  height: calc(100vh - 135px);
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.sidebar-dropdown::-webkit-scrollbar {
+  display: none;
 }
