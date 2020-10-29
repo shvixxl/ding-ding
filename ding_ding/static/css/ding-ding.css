@@ -7,7 +7,7 @@ a, a:visited, a:hover, a:active, a:focus {
   text-decoration: none;
 }
 
-.jumbotron {
+.index-hero {
   background: url("../img/jumbotron.jpg") no-repeat center;
 }
 
@@ -27,27 +27,51 @@ a, a:visited, a:hover, a:active, a:focus {
   min-height: calc(100vh - 46px);
 }
 
-.admin {
+#admin {
   padding-left: 250px;
+  width: calc(100vw - 250px);
+}
+
+.store-img {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+
+.item-card {
+  min-height: 400px;
+}
+
+.item-card-img {
+  height: 200px;
+  background-position: center;
+  background-size: cover;
 }
 
 .sidebar {
   width: 250px;
 }
 
-.type-link, .type-link:visited,
-.store-link, .store-link:visited {
-  color: rgb(100%, 100%, 100%);
+.type-link, .type-link:visited {
+  color: #ffac33;
 }
 
-.type-link:active, .type-link:hover, .type-link:focus, .type-link.active
+.type-link:active, .type-link:hover, .type-link:focus, .type-link.active {
+  color: #cc8a29;
+}
+
+.store-link, .store-link:visited {
+  color: #f8f9fa;
+}
+
 .store-link:active, .store-link:hover, .store-link:focus, .store-link.active {
-  color: rgb(50%, 50%, 50%);
+  color: #cacbcc;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .sidebar-dropdown {
-  height: calc(100vh - 135px);
+  height: calc(100vh - 220px);
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
@@ -55,4 +79,28 @@ a, a:visited, a:hover, a:active, a:focus {
 /* Hide scrollbar for Chrome, Safari and Opera */
 .sidebar-dropdown::-webkit-scrollbar {
   display: none;
+}
+
+.toast-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.success-toast, .fail-toast {
+  cursor: pointer;
+}
+
+#admin > .spinner-border {
+  position: absolute;
+  top: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+}
+
+#stores > .spinner-border {
+  position: absolute;
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
 }

@@ -1,0 +1,22 @@
+{% for type in types %}
+<div class="accordion">
+  <div class="mb-4">
+    <a class="w-100 text-left d-block type-link" role="button" data-toggle="collapse" data-target="#{{ type.name }}-stores" aria-expanded="false" aria-controls="{{ type.name }}">
+        <h3 class="font-weight-bold">{{ type.name|capitalize }} <span class="badge badge-pill badge-light stores-count">{{ type.count }}</span></h3>
+    </a>
+    <div id="{{ type.name }}-stores" class="collapse ml-2 pl-2 border-left border-primary">
+      <ul class="list-unstyled list-stores">
+        {% for store in stores %}
+          {% if store.type == type.name %}
+            <li class="py-2">
+              <a store-id="{{ store.id }}" class="store-link" role="button">
+                <h5>{{ store.name|capitalize }}</h5>
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endfor %}

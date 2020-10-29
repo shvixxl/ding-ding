@@ -105,6 +105,17 @@ def login():
     return render_template('auth/login.html')
 
 
+@bp.route('/confirm', methods=['POST'])
+@login_required
+def confirm():
+    password = request.form['password']
+
+    if check_password_hash(password, g.user['password']):
+        return 'Wrong password', 403
+
+    return '', 202
+
+
 @bp.route('/logout')
 def logout():
     session.clear()

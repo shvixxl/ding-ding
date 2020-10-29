@@ -159,7 +159,7 @@ a {
 }
 
 a:hover {
-  color: #0056b3;
+  color: #b37824;
   text-decoration: underline;
 }
 
@@ -2550,14 +2550,14 @@ fieldset:disabled a.btn {
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #d9922b;
+  border-color: #cc8a29;
 }
 
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #d9922b;
+  border-color: #cc8a29;
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
 
@@ -2570,8 +2570,8 @@ fieldset:disabled a.btn {
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #0062cc;
-  border-color: #005cbf;
+  background-color: #cc8a29;
+  border-color: #bf8126;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -3101,7 +3101,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-link:hover {
-  color: #0056b3;
+  color: #b37824;
   text-decoration: underline;
 }
 
@@ -3394,7 +3394,7 @@ input[type="button"].btn-block {
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #ffac33;
+  background-color: #b37824;
 }
 
 .dropdown-item.disabled, .dropdown-item:disabled {
@@ -5021,7 +5021,7 @@ input[type="button"].btn-block {
 
 .page-link:hover {
   z-index: 2;
-  color: #0056b3;
+  color: #b37824;
   text-decoration: none;
   background-color: #e9ecef;
   border-color: #dee2e6;
@@ -5136,7 +5136,7 @@ a.badge:hover, a.badge:focus {
 
 a.badge-primary:hover, a.badge-primary:focus {
   color: #fff;
-  background-color: #0062cc;
+  background-color: #cc8a29;
 }
 
 a.badge-primary:focus, a.badge-primary.focus {
@@ -6717,7 +6717,7 @@ a.close.disabled {
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-  background-color: #0062cc !important;
+  background-color: #cc8a29 !important;
 }
 
 .bg-secondary {
@@ -10078,7 +10078,7 @@ button.bg-dark:focus {
 }
 
 a.text-primary:hover, a.text-primary:focus {
-  color: #0056b3 !important;
+  color: #b37824 !important;
 }
 
 .text-secondary {
