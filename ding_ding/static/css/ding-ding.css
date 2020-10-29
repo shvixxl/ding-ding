@@ -40,7 +40,7 @@ a, a:visited, a:hover, a:active, a:focus {
 }
 
 .item-card {
-  min-height: 400px;
+  height: 400px;
 }
 
 .item-card-img {
@@ -69,15 +69,18 @@ a, a:visited, a:hover, a:active, a:focus {
   color: #cacbcc;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.sidebar-dropdown {
+.sidebar .overflow-auto {
   height: calc(100vh - 220px);
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.overflow-auto {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-.sidebar-dropdown::-webkit-scrollbar {
+.overflow-auto::-webkit-scrollbar {
   display: none;
 }
 

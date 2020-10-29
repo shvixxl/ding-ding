@@ -1,5 +1,8 @@
 var currentStore;
 
+
+// UPDATE
+
 function updateSidebar() {
   let url = "/admin/panel/?q=" + $("#search-store").val();
 
@@ -60,6 +63,8 @@ function updateView() {
 }
 
 
+// STORE
+
 function addStore() {
   $("#addStoreButton").html("<span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>");
   $("#addStoreButton").attr("disabled", "disabled");
@@ -75,13 +80,13 @@ function addStore() {
 
       // Close menu and update page
       $("#addStore").modal('hide');
-      $("#addStore").on('hidden.bs.modal', updateSidebar);
-    },
-    error: function (data) {
-      showFailToast('Store is not added!', data.responseJSON.error);
+      updateSidebar();
 
       $("#addStoreButton").html("Add")
       $("#addStoreButton").removeAttr("disabled");
+    },
+    error: function (data) {
+      showFailToast('Store is not added!', data.responseJSON.error);
     }
   });
 
@@ -122,7 +127,7 @@ function editStore() {
 
 
 function deleteStore() {
-  var id = $(this).attr('store-id');
+  id = $(this).attr('store-id');
 
   $(this).html("<span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>");
   $(this).attr("disabled", "disabled");
@@ -142,7 +147,12 @@ function deleteStore() {
         showSuccToast('Store deleted successfully!');
 
         // Close menu and update page
+        // Horrible piece of shit
+        $("#editStore-" + id).on('shown.bs.modal', function() {
+          $("#editStore-" + id).modal('hide');
+        });
         $("#editStore-" + id).modal('hide');
+
         $("#editStore-" + id).on('hidden.bs.modal', function() {
           $("#admin").empty();
           updateSidebar();
@@ -150,7 +160,6 @@ function deleteStore() {
       },
       error: function (data) {
         showFailToast('Store is not deleted!', data.responseJSON.error);
-
         $("#deleteStoreButton").html("Delete");
         $("#deleteStoreButton").removeAttr("disabled");
       }
@@ -170,6 +179,8 @@ function deleteStore() {
   return false;
 }
 
+
+// ITEM
 
 function addItem() {
   $("#addItemButton").html("<span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>");
@@ -231,7 +242,53 @@ function editItem() {
 }
 
 function deleteItem() {
+  id = $(this).attr('item-id');
 
+  $(this).html("<span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>");
+  $(this).attr("disabled", "disabled");
+
+  $("#editItem-" + id).modal('hide');
+
+  function funY() {
+    $("#editItem-" + id).modal('show');
+
+    url = "/admin/delete_item/";
+
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: $("#editItemForm-" + id).serialize(),
+      success: function (data) {
+        showSuccToast('Item deleted successfully!');
+
+        // Close menu and update page
+        // Horrible piece of shit
+        $("#editItem-" + id).on('shown.bs.modal', function() {
+          $("#editItem-" + id).modal('hide');
+        });
+        $("#editItem-" + id).modal('hide');
+        $("#editItem-" + id).on('hidden.bs.modal', updateView);
+      },
+      error: function (data) {
+        showFailToast('Item is not deleted!', data.responseJSON.error);
+
+        $("#deleteItemButton" + id).html("Delete");
+        $("#deleteItemButton" + id).removeAttr("disabled");
+      }
+    });
+  }
+
+  function funN() {
+    $("#editItem-" + id).modal('show');
+    showFailToast("Item is not deleted!");
+
+    $("#deleteItemButton-" + id).html("Delete");
+    $("#deleteItemButton-" + id).removeAttr("disabled");
+  }
+
+  confirmation(funY, funN);
+
+  return false;
 }
 
 
@@ -290,12 +347,15 @@ function confirmation(funY, funN) {
       }
     });
 
+    $("#confirmationForm").off('submit');
+
     return false;
   });
 
   $("#confirmationNo").on('click', function() {
     $("#confirmation").modal('hide');
     funN();
+    $("#confirmationNo").off('click');
   });
 }
 

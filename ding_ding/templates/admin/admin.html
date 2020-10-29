@@ -4,8 +4,6 @@
 
 {% block page %}
 
-  <div class="toast-container p-3" id="adminToastContainer"></div>
-
   <nav class='navbar sidebar navbar-expand-lg navbar-dark bg-dark position-fixed vh-100 align-items-start shadow-lg'>
     <div class="d-flex flex-column w-100 pt-3 px-2">
       <a class="navbar-brand mx-auto" href="{{ url_for('index.index') }}">
@@ -31,6 +29,7 @@
     <!-- store page -->
   </main>
 
+  <div class="toast-container p-3" id="adminToastContainer"></div>
 
   <!-- Modal "Add Store" -->
   <div class="modal fade" id="addStore" tabindex="-1" aria-hidden="true" data-keyboard="false" data-backdrop="static">

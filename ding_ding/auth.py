@@ -110,7 +110,7 @@ def login():
 def confirm():
     password = request.form['password']
 
-    if check_password_hash(password, g.user['password']):
+    if not check_password_hash(g.user['password'], password):
         return 'Wrong password', 403
 
     return '', 202

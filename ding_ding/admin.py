@@ -94,6 +94,8 @@ def add_item():
         error = 'Name is not provided.'
     elif not price:
         error = 'Price is not provided.'
+    elif int(price) < 0:
+        error= 'Price cannot be less than 0.'
 
     if error is not None:
         return jsonify(error=error), 400

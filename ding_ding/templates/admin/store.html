@@ -6,7 +6,7 @@
       <div class="store-img mr-3 shadow bg-primary"></div>
     {% endif %}
     <div class="media-body mr-3">
-      <h1 class="display-3 font-weight-bold">{{ store.name|capitalize }}</h1>
+      <h1 class="display-3 font-weight-bold">{{ store.name }}</h1>
       {% if store.description %}
         <p class="lead">{{ store.description }}</p>
       {% endif %}
@@ -45,12 +45,13 @@
               </svg>
             </button>
           </div>
-
-        <div class="card-body">
-          <h5>{{ item.name|capitalize }}</h5>
-          {% if item.description %}
-            <p class="card-text text-muted">{{ item.description }}</p>
-          {% endif %}
+        <div class="d-flex flex-column card-body">
+          <h5>{{ item.name }}</h5>
+          <div class="overflow-auto">
+            {% if item.description %}
+              <p class="card-text text-muted">{{ item.description }}</p>
+            {% endif %}
+          </div>
         </div>
         <div class="card-footer">
           <strong>{{ item.price }} $</strong>
@@ -68,7 +69,7 @@
       <form id="addItemForm">
         <input type="hidden" name="store-id" value="{{ store.id }}">
         <div class="modal-header">
-          <h5 class="modal-title" id="addItemLabel">Add new Item to <strong>{{ store.name|capitalize }}</strong></h5>
+          <h5 class="modal-title" id="addItemLabel">Add new Item to <strong>{{ store.name }}</strong></h5>
         </div>
         <div class="modal-body">
           <div class="form-group">
@@ -107,7 +108,7 @@
         <form class="editItemForm" id="editItemForm-{{ item.id }}" item-id="{{ item.id }}">
           <input type="hidden" name="item-id" value="{{ item.id }}">
           <div class="modal-header">
-            <h5 class="modal-title">Edit item <strong>{{ item.name|capitalize }}</strong></h5>
+            <h5 class="modal-title">Edit item <strong>{{ item.name }}</strong></h5>
           </div>
           <div class="modal-body">
             <div class="form-group">
@@ -130,7 +131,7 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger mr-auto deleteItemButton" item-id="{{ item.id }}">Delete</button>
+            <button type="button" class="btn btn-danger mr-auto deleteItemButton" id="#deleteItemButton-{{ item.id }}" item-id="{{ item.id }}">Delete</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             <button type="submit" class="btn btn-primary" id="editItemButton-{{ item.id }}">Edit</button>
           </div>
@@ -148,7 +149,7 @@
       <form class="editStoreForm" id="editStoreForm-{{ store.id }}" store-id="{{ store.id }}">
         <input type="hidden" name="store-id" value="{{ store.id }}">
         <div class="modal-header">
-          <h5 class="modal-title">Edit store <strong>{{ store.name|capitalize }}</strong></h5>
+          <h5 class="modal-title">Edit store <strong>{{ store.name }}</strong></h5>
         </div>
         <div class="modal-body">
           <div class="form-group">
@@ -161,7 +162,7 @@
               <input type="text" name="type" list="types" value="{{ store.type }}">
               <datalist id="types">
                 {% for type in types %}
-                  <option value="{{ type }}">{{ type|capitalize }}</option>
+                  <option value="{{ type }}">{{ type }}</option>
                 {% endfor %}
               </datalist>
             </div>
@@ -201,7 +202,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success mr-auto" id="convirmationNo">Cancel</button>
+          <button type="button" class="btn btn-success mr-auto" id="confirmationNo">Cancel</button>
           <button type="submit" class="btn btn-danger" id="confirmationYes">Confirm</button>
         </div>
       </form>
